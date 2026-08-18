@@ -22,7 +22,7 @@ Classic CFR solves poker by tabulating regret for every information set — infe
 2. **Advantage (regret) network** learns to predict the regret of each action, generalizing to states never explicitly visited.
 3. **Strategy network** distills the time-averaged strategy that CFR converges toward — this is the network used for play.
 
-A few things that make this implementation interesting:
+Implementation Details:
 
 - **Ray-distributed self-play** — traversals are fanned out to worker processes; network weights are shared through Ray's zero-copy store and results are merged as each worker finishes.
 - **Opponent-pool curriculum** — instead of always training against its current self, the bot faces a rotating pool of past checkpoints (mostly the latest, occasionally a random older one) to avoid overfitting to a single opponent.
