@@ -1,0 +1,34 @@
+# --- Environments (never commit the 160MB+ conda env or installer) ---
+.conda/
+.venv/
+venv/
+Miniconda3-*.sh
+Miniconda3-latest-Linux-x86_64.sh
+
+# --- Python cruft ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Training artifacts (big + regenerable) ---
+checkpoints*/
+models*/
+*.npz                 # replay buffers
+*.pt                  # torch checkpoints...
+!submission/data/*.pt # ...except the small demo checkpoint(s) you ship
+
+# --- Logs & match dumps ---
+logs/
+agent_logs/
+*.csv
+*.log
+
+# --- Ray ---
+/tmp/ray/
+.ray/
+
+# --- Editor/OS ---
+.vscode/
+.idea/
+.DS_Store
