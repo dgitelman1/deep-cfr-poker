@@ -11,7 +11,7 @@ Built for the [CMU Data Science Club](https://github.com/cmu-dsc) poker hackatho
 A custom heads-up (1v1) poker variant:
 
 - **27-card deck** — 9 ranks (`2–9, A`) × 3 suits.
-- Each player is dealt **5 hole cards** and, on the flop, must **discard down to 2** — a large, information-rich decision most poker bots never face.
+- Each player is dealt **5 hole cards** and, on the flop, must **discard down to 2**.
 - Streets: pre-flop → flop (+ discard) → turn → river, then showdown.
 
 ## Approach
